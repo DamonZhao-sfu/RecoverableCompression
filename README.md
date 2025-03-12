@@ -113,7 +113,7 @@ If you find our work useful for your research and applications, please cite usin
 
 ## Core code
 
-The code we provide is designed to work under a training-free setting. If you need to make adjustments, you can utilize the fine-tuning script provided by LLaVA to implement those changes. The core changes in our work are located in `llava/model/multimodal_encoder/clipencoder.py`. You can make the modifications directly in this file. 
+The code we provide is designed to work under a training-free setting. If you need to make adjustments, you can utilize the fine-tuning script provided by LLaVA to implement those changes. The core changes in our work are located in `llava/model/multimodal_encoder/clipencoder.py` You can make the modifications directly in this file. 
 
 ## Contact Us
 
