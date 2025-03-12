@@ -21,6 +21,7 @@ To minimize the loss of important information during the token compression proce
 </div>
 
 # Experiments
+## Performance comparison with other multimodal models and pruning methods.
 | Method             | ScienceQA | TextVQA | MME      | VQAv2   | POPE   | MMBench |
 |--------------------|-----------|---------|----------|---------|--------|---------|
 | BLIP-2             | 61.00     | 42.50   | 1293.80  | 41.00   | 85.30  | -       |
@@ -41,6 +42,17 @@ To minimize the loss of important information during the token compression proce
 | ToMe               | 50.00     | 45.30   | 1138.00  | 57.10   | 52.50  | 43.70   |
 | LLaVA-PruMerge     | 68.52     | 53.51   | 1191.50  | 65.90   | 70.70  | 56.78   |
 | Ours               | **69.01** | **55.51** | **1284.90** | **70.41** | **72.00** | **57.90** |
+
+## Comparison of computational costs on NVIDIA A100 GPU.
+| Method   | LLM Backbone | Quantization | FLOPs (T) | Prefill Time (ms) | Total Memory (G) | Storing Activation (G) |
+|----------|--------------|--------------|-----------|--------------------|-------------------|------------------------|
+| LLaVA1.5 | Vicuna-7B   | FP16         | 8.5       | 30.3               | 22.2              | 4.1                    |
+| Ours     | Vicuna-7B   | FP16         | **1.5**   | **9.2**            | **14.4**          | **0.49**               |
+| LLaVA1.5 | Vicuna-7B   | INT8         | 4.3       | 15.2               | 11.1              | 2.0                    |
+| Ours     | Vicuna-7B   | INT8         | **0.8**   | **4.6**            | **7.2**           | **0.24**               |
+| LLaVA1.5 | Vicuna-7B   | INT4         | 2.1       | 14.2               | 5.56              | 1.0                    |
+| Ours     | Vicuna-7B   | INT4         | **0.4**   | **2.6**            | **3.6**           | **0.12**               |
+
 [banjiuyufen](https://github.com/banjiuyufen) [[Project Page](https://github.com/banjiuyufen/Recoverable-Compression)]
 
 
