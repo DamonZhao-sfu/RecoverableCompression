@@ -90,6 +90,8 @@ Figure 5 `Visualization 4` shows a summary example of a question that requires t
   <img src="https://github.com/banjiuyufen/images/blob/8fd962ada8e610506a10ee461f6eedc1eb7d3523/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/v4.png" alt="Visualization 1" width="100%">
   <p>Figure 5: Visualization 4</p>
 </div>
+
+
 # Acknowledgements
 
 This work was supported by the Strategic Priority Research Program of the Chinese Academy of Sciences (No.XDA0450202), Beijing Municipal Science and Technology Project (No.Z231100010323005), CAS Project for Young Scientists in Basic Research (YSBR-083), and 2035 Innovation Mission Project (No.E4J10102). This work is supported by the PaddlePaddle team (https://www.paddlepaddle.org.cn/).
