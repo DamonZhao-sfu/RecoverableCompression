@@ -1,5 +1,4 @@
 # Recoverable Compression: A Multimodal Vision Token Recovery Mechanism Guided by Text Information
-The code of  "Recoverable-Compression: A Multimodal Vision Token Recovery Mechanism Guided by Text Information"
 
 ## This work has been accepted by AAAI2025🎉🎉🎉🎉🎉🎉
 
