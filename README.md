@@ -22,6 +22,7 @@ To minimize the loss of important information during the token compression proce
 
 <div align="center">
   <img src="https://github.com/banjiuyufen/images/blob/8eb158b8a4af6ca3eb5dde2819a83fd1a608ed29/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/Overview.png" alt="Overview" width="100%">
+  <p>Figure 1: Overview</p>
 </div>
 
 # Experiments
