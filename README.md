@@ -10,7 +10,7 @@ With the advancement of large-scale language modeling techniques, large multimod
 
 ## Overview
 
-To minimize the loss of important information during the token compression process, we propose a text information-guided dynamic visual token recovery mechanism. The framework of this method is illustrated in Figure `Overview`. Firstly, the image and the question are separately encoded by visual and text encoders, resulting in visual tokens and text embeddings. Then, these outputs are fed into the token recovery module, which consists of four steps:
+To minimize the loss of important information during the token compression process, we propose a text information-guided dynamic visual token recovery mechanism. The framework of this method is illustrated in Figure 1 `Overview`. Firstly, the image and the question are separately encoded by visual and text encoders, resulting in visual tokens and text embeddings. Then, these outputs are fed into the token recovery module, which consists of four steps:
 
 <font color=red> **Visual Filter** </font>: Calculate the similarity between the visual class token and other visual tokens, generating visual scores. A dynamic scale filter algorithm is used to determine the threshold for the visual scores, and the top-k tokens based on the threshold are selected as the visual tokens with high scores.
 
@@ -63,13 +63,33 @@ To minimize the loss of important information during the token compression proce
 
 
 ## Visualization
-In order to visually demonstrate the effectiveness of our proposed method, we have added additional visualization experiments. The red box area represents the image area corresponding to the answer. As shown in Figure `Visualization 1`, The tokens used for visual score screening are disorganized and do not contain the image regions corresponding to the final answer. The tokens collected for text information recovery are orderly, concentrated in regions related to the question, and include the regions contained in the answer. This indicates that our proposed method can recover lost important information through textual information.
+In order to visually demonstrate the effectiveness of our proposed method, we have added additional visualization experiments. The red box area represents the image area corresponding to the answer. As shown in Figure 2 `Visualization 1`, The tokens used for visual score screening are disorganized and do not contain the image regions corresponding to the final answer. The tokens collected for text information recovery are orderly, concentrated in regions related to the question, and include the regions contained in the answer. This indicates that our proposed method can recover lost important information through textual information.
 
 <div align="center">
   <img src="https://github.com/banjiuyufen/images/blob/8fd962ada8e610506a10ee461f6eedc1eb7d3523/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/v1.png" alt="Visualization 1" width="100%">
+  <p>Figure 2: Visualization 1</p>
 </div>
 
+As shown in Figure 3 `Visualization 2`, in this instance, the visual score has already selected some tokens related to the question, and the tokens obtained using the text information recovery mechanism further increase the tokens associated with the problem.
 
+<div align="center">
+  <img src="https://github.com/banjiuyufen/images/blob/8fd962ada8e610506a10ee461f6eedc1eb7d3523/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/v2.png" alt="Visualization 1" width="100%">
+  <p>Figure 3: Visualization 2</p>
+</div>
+
+In Figure 4 `Visualization 3`, The visual score has selected tokens related to the question area, and the text information recovery mechanism continues to supplement tokens related to the problem to ensure the model.
+
+<div align="center">
+  <img src="https://github.com/banjiuyufen/images/blob/8fd962ada8e610506a10ee461f6eedc1eb7d3523/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/v3.png" alt="Visualization 1" width="100%">
+  <p>Figure 4: Visualization 3</p>
+</div>
+
+Figure 5 `Visualization 4` shows a summary example of a question that requires the model to select the best option. The areas with high visual scores are mostly concentrated in the text area, but these areas are not highly relevant to the question. The token obtained by the text information recovery mechanism focuses on the edge position of the entity region in the image. And it happens to correspond to the fragility of the attribute, which helps the model choose the most general and correct option. However, for the entity beaker, neither the tokens selected by the visual score nor the text information recovery mechanism have been paid attention to.
+
+<div align="center">
+  <img src="https://github.com/banjiuyufen/images/blob/8fd962ada8e610506a10ee461f6eedc1eb7d3523/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/v4.png" alt="Visualization 1" width="100%">
+  <p>Figure 5: Visualization 4</p>
+</div>
 # Acknowledgements
 
 This work was supported by the Strategic Priority Research Program of the Chinese Academy of Sciences (No.XDA0450202), Beijing Municipal Science and Technology Project (No.Z231100010323005), CAS Project for Young Scientists in Basic Research (YSBR-083), and 2035 Innovation Mission Project (No.E4J10102). This work is supported by the PaddlePaddle team (https://www.paddlepaddle.org.cn/).
