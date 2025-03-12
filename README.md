@@ -65,7 +65,7 @@ To minimize the loss of important information during the token compression proce
 In order to visually demonstrate the effectiveness of our proposed method, we have added additional visualization experiments. The red box area represents the image area corresponding to the answer. As shown in Figure `Visualization 1`, The tokens used for visual score screening are disorganized and do not contain the image regions corresponding to the final answer. The tokens collected for text information recovery are orderly, concentrated in regions related to the question, and include the regions contained in the answer. This indicates that our proposed method can recover lost important information through textual information.
 
 <div align="center">
-  <img src="[https://github.com/banjiuyufen/images/blob/8eb158b8a4af6ca3eb5dde2819a83fd1a608ed29/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/Overview.png](https://github.com/banjiuyufen/images/blob/8fd962ada8e610506a10ee461f6eedc1eb7d3523/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/v1.png)" alt="Overview" width="100%">
+  <img src="https://github.com/banjiuyufen/images/blob/8fd962ada8e610506a10ee461f6eedc1eb7d3523/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/v1.png" alt="Visualization 1" width="100%">
 </div>
 
 
