@@ -55,7 +55,10 @@ To minimize the loss of important information during the token compression proce
 | LLaVA1.5 | Vicuna-7B   | INT4         | 2.1       | 14.2               | 5.56              | 1.0                    |
 | Ours     | Vicuna-7B   | INT4         | **0.4**   | **2.6**            | **3.6**           | **0.12**               |
 
-[banjiuyufen](https://github.com/banjiuyufen) [[Project Page](https://github.com/banjiuyufen/Recoverable-Compression)]
+# Note
+The code has undergone a preliminary review. If you encounter any issues or have questions, please feel free to contact the primary author. We are honored if our work has inspired you, and we welcome any discussions you may want to have with us.
+
+[[banjiuyufen](https://github.com/banjiuyufen)] [[Project Page](https://github.com/banjiuyufen/Recoverable-Compression)]
 
 
 
