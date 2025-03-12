@@ -68,7 +68,7 @@ This work was supported by the Strategic Priority Research Program of the Chines
 
 ## Citation
 
-If you find LLaVA useful for your research and applications, please cite using this BibTeX:
+If you find our work useful for your research and applications, please cite using this BibTeX:
 ```bibtex
 @article{chen2024recoverable,
   title={Recoverable compression: A multimodal vision token recovery mechanism guided by text information},
