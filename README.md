@@ -8,13 +8,13 @@ With the advancement of large-scale language modeling techniques, large multimod
 ## Overview
 To minimize the loss of important information during the token compression process, we propose a text information-guided dynamic visual token recovery mechanism. The framework of this method is illustrated in Figure \ref{fig: overview}. Firstly, the image and the question are separately encoded by visual and text encoders, resulting in visual tokens and text embeddings. Then, these outputs are fed into the token recovery module, which consists of four steps:
 
-**Visual Filter** Calculate the similarity between the visual class token and other visual tokens, generating visual scores. A dynamic scale filter algorithm is used to determine the threshold for the visual scores, and the top-k tokens based on the threshold are selected as the visual tokens with high scores.
+<font color=red>**Visual Filter**</font>: Calculate the similarity between the visual class token and other visual tokens, generating visual scores. A dynamic scale filter algorithm is used to determine the threshold for the visual scores, and the top-k tokens based on the threshold are selected as the visual tokens with high scores.
 
-**Text Information Recovery** Calculate the similarity between the remaining tokens and the text embedding, generating text scores. Similarly, use a dynamic scale filter algorithm to determine the threshold for the text scores, and select the top-k tokens based on the threshold as the text tokens with high scores. This completes the first round of semantic-guided dynamic recovery.
+<font color=red>**Text Information Recovery**</font>: Calculate the similarity between the remaining tokens and the text embedding, generating text scores. Similarly, use a dynamic scale filter algorithm to determine the threshold for the text scores, and select the top-k tokens based on the threshold as the text tokens with high scores. This completes the first round of semantic-guided dynamic recovery.
 
-**Secondary Recovery** For the remaining tokens, apply the KNN to perform clustering and merge each cluster into a single token.
+<font color=red>**Secondary Recovery**</font>: For the remaining tokens, apply the KNN to perform clustering and merge each cluster into a single token.
 
-**Token Merger** Concatenate all the tokens obtained from Steps 1, 2, and 3. It is worth noting that during the training phase, LLMs are trained on input sequences arranged according to the original token order. As a result, the input to LLM is highly sensitive to the sequence order. It is important to keep the original order of tokens when merging them from Steps 1 and 2.
+<font color=red>**Token Merger**</font>: Concatenate all the tokens obtained from Steps 1, 2, and 3. It is worth noting that during the training phase, LLMs are trained on input sequences arranged according to the original token order. As a result, the input to LLM is highly sensitive to the sequence order. It is important to keep the original order of tokens when merging them from Steps 1 and 2.
 
 
 <div align="center">
