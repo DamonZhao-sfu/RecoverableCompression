@@ -79,6 +79,13 @@ If you find our work useful for your research and applications, please cite usin
 ```
 
 # Note
+
+## Core code
+
+The code we provide is designed to work under a training-free setting. If you need to make adjustments, you can utilize the fine-tuning script provided by LLaVA to implement those changes. The core changes in our work are located in the file `llava/model/multimodal_encoder/clipencoder.py`. You can make the modifications directly in this file. 
+
+## Contact Us
+
 The code has undergone a preliminary review. If you encounter any issues or have questions, please feel free to contact the primary author. We are honored if our work has inspired you, and we welcome any discussions you may want to have with us.
 
 [[banjiuyufen](https://github.com/banjiuyufen)] [[Project Page](https://github.com/banjiuyufen/Recoverable-Compression)]
