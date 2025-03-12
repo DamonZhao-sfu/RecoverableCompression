@@ -10,7 +10,7 @@ With the advancement of large-scale language modeling techniques, large multimod
 
 ## Overview
 
-To minimize the loss of important information during the token compression process, we propose a text information-guided dynamic visual token recovery mechanism. The framework of this method is illustrated in Figure overview. Firstly, the image and the question are separately encoded by visual and text encoders, resulting in visual tokens and text embeddings. Then, these outputs are fed into the token recovery module, which consists of four steps:
+To minimize the loss of important information during the token compression process, we propose a text information-guided dynamic visual token recovery mechanism. The framework of this method is illustrated in Figure `Overview`. Firstly, the image and the question are separately encoded by visual and text encoders, resulting in visual tokens and text embeddings. Then, these outputs are fed into the token recovery module, which consists of four steps:
 
 <font color=red> **Visual Filter** </font>: Calculate the similarity between the visual class token and other visual tokens, generating visual scores. A dynamic scale filter algorithm is used to determine the threshold for the visual scores, and the top-k tokens based on the threshold are selected as the visual tokens with high scores.
 
@@ -21,7 +21,7 @@ To minimize the loss of important information during the token compression proce
 <font color=red> **Token Merger** </font>: Concatenate all the tokens obtained from Steps 1, 2, and 3. It is worth noting that during the training phase, LLMs are trained on input sequences arranged according to the original token order. As a result, the input to LLM is highly sensitive to the sequence order. It is important to keep the original order of tokens when merging them from Steps 1 and 2.
 
 <div align="center">
-  <img src="https://github.com/banjiuyufen/images/blob/8eb158b8a4af6ca3eb5dde2819a83fd1a608ed29/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/Overview.png" alt="The approach" width="100%">
+  <img src="https://github.com/banjiuyufen/images/blob/8eb158b8a4af6ca3eb5dde2819a83fd1a608ed29/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/Overview.png" alt="Overview" width="100%">
 </div>
 
 # Experiments
@@ -61,12 +61,20 @@ To minimize the loss of important information during the token compression proce
 | Ours     | Vicuna-7B   | INT4         | **0.4**   | **2.6**            | **3.6**           | **0.12**               |
 
 
-## Acknowledgements
+## Visualization
+In order to visually demonstrate the effectiveness of our proposed method, we have added additional visualization experiments. The red box area represents the image area corresponding to the answer. As shown in Figure `Visualization 1`, The tokens used for visual score screening are disorganized and do not contain the image regions corresponding to the final answer. The tokens collected for text information recovery are orderly, concentrated in regions related to the question, and include the regions contained in the answer. This indicates that our proposed method can recover lost important information through textual information.
+
+<div align="center">
+  <img src="[https://github.com/banjiuyufen/images/blob/8eb158b8a4af6ca3eb5dde2819a83fd1a608ed29/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/Overview.png](https://github.com/banjiuyufen/images/blob/8fd962ada8e610506a10ee461f6eedc1eb7d3523/Multimodal%20Vision%20Token%20Recycling%20Mechanism%20Guided%20by%20Text%20Information/v1.png)" alt="Overview" width="100%">
+</div>
+
+
+# Acknowledgements
 
 This work was supported by the Strategic Priority Research Program of the Chinese Academy of Sciences (No.XDA0450202), Beijing Municipal Science and Technology Project (No.Z231100010323005), CAS Project for Young Scientists in Basic Research (YSBR-083), and 2035 Innovation Mission Project (No.E4J10102). This work is supported by the PaddlePaddle team (https://www.paddlepaddle.org.cn/).
 
 
-## Citation
+# Citation
 
 If you find our work useful for your research and applications, please cite using this BibTeX:
 ```bibtex
