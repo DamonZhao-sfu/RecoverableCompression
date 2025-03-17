@@ -96,7 +96,7 @@ Figure 5 `Visualization 4` shows a summary example of a question that requires t
 
 · This work was supported by the Strategic Priority Research Program of the Chinese Academy of Sciences (No.XDA0450202), Beijing Municipal Science and Technology Project (No.Z231100010323005), CAS Project for Young Scientists in Basic Research (YSBR-083), and 2035 Innovation Mission Project (No.E4J10102). This work is supported by the PaddlePaddle team (https://www.paddlepaddle.org.cn/).
 
-· [LLaVA-PruMerge](https://github.com/42Shawn/LLaVA-PruMerge): our codebase is built upon this foundation, and we would like to express our gratitude to the original authors for their contributions.
+· [LLaVA-PruMerge](https://github.com/42Shawn/LLaVA-PruMerge): Our codebase is built upon this foundation, and we would like to express our gratitude to the original authors for their contributions.
 
 
 
