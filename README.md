@@ -112,7 +112,10 @@ If you find our work useful for your research and applications, please cite usin
   year={2024}
 }
 
-@article{Chen_Xu_Zhang_Liu_Liu_Liu_2025, title={Recoverable Compression: A Multimodal Vision Token Recovery Mechanism Guided by Text Information}, volume={39}, url={https://ojs.aaai.org/index.php/AAAI/article/view/32229},
+@article{Chen_Xu_Zhang_Liu_Liu_Liu_2025,
+  title={Recoverable Compression: A Multimodal Vision Token Recovery Mechanism Guided by Text Information},
+  volume={39},
+  url={https://ojs.aaai.org/index.php/AAAI/article/view/32229},
   DOI={10.1609/aaai.v39i2.32229},
   number={2},
   journal={Proceedings of the AAAI Conference on Artificial Intelligence},
